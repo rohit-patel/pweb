@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container-fluid pg-banner">
+		<div class="container">
+			<div class="col-xs-12 banner-content">
+				<h3 class="animate wow fadeInUp">LaTeX Beamer Themes</h3>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid welcome-fluid">
+		<div class="container">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="col-xs-12 theme-div" style="">
+					<p class="animate wow fadeInUp">When I was set to present my work while at Kellogg, I decided to tinker with the beamer styles. Here are the results.</p>
+					<h5 class="animate wow fadeInUp">Note: More specific themes can be found here for <a href="#">Northwestern</a> and <a href="#">Kellogg</a> students.</h5>
+					<h4 class="animate wow flipInX">Changelog and Usage Instructions</h4>
+					<ul>
+						<li class="animate wow">First, here is the pdf output: <a href="https://www.dropbox.com/s/paapp9sev9rdl92/Econ1.pdf?dl=1" target="_blank">Econ1.pdf</a></li>
+						<li class="animate wow">You will need to place the file <a href="https://www.dropbox.com/s/odju4hqhn2v7fa9/beamerthemeEcon1.sty?dl=1" target="_blank"> beamerthemeEcon1.sty</a>, along with any logo files, in the folder where your tex file is located.</li>
+						<li class="animate wow">The Theme is quite customizable. A logo can be added to the title page by adding the following line to the preamble before the theme is invoked
+							<br><br><code>\def\Logo{logofilename.extension}</code><br><br>Where the extension can be pdf/eps/png/jpg etc...
+						</li>
+						<li class="animate wow">The default color can be changed, by passing the structure argument as for the inbuilt beamer themes<br>
+							<br><code>\usecolortheme[RGB={47,104,150}]{structure}</code>
+						</li>
+						<li class="animate wow">The text in any of the boxes in the footer can be defined by issuing the commands:<br>
+							<br><code>\def\UpperLeftBoxText{Upper Left Box Text}</code><br>
+							<br><code>\def\UpperRightBoxText{Upper Right Box Text}</code><br>
+							<br><code>\def\ShadedLeftBoxText{Shaded Left Box Text}</code><br>
+							<br><code>\def\ShadedRightBoxText{Shaded Right Box Text}</code>
+						</li>
+						<li class="animate wow">
+							The default behavior is to not list the institute(s) of the author(s) on the title page when a logo is specified and to list it (as is normally the case) when there is no logo added. However, sometime you may want to have both. The following command can be added to the preamble to force the institute name on the title page even in the presence of the logo.
+							<br><br><code>\def\ForceInstitute{}</code><br><br>
+							This command does nothing when there is no logo present.
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

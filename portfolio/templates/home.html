@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+    <section id="home">
+	<div class="container-fluid welcome-fluid hm-fluid-pad">
+		<div class="container">
+			  <div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12 hm-content">
+					<div class="col-xs-12 hm-left-div animate wow fadeInLeft" style="animation-delay:1s;">
+						<div class="col-xs-12 paddingZ">
+							<img class="img-responsive m-auto" src="{% static 'img/AboutImg.jpg' %}">
+						</div>
+					</div>
+					<div class="col-sm-8 col-xs-12 hm-right-div">
+						<ul class="hm-list">
+							<li class="animate wow flipInX">Strategy and analytics professional with 9+ years of experience</li>
+							<li class="animate wow flipInX">Executed numerous successful projects working with C-suite executives leading to tangible business outcomes</li>
+							<li class="animate wow flipInX">Experienced leader having trained and managed large teams</li>
+							<li class="animate wow flipInX">Expertise using AI, machine learning, game theory and advanced analytics to drive strategy and deliver real business impact - from identifying the opportunity, to execution and impact realization</li>
+							<li class="animate wow flipInX">Enjoy bringing complex analytical ideas to business audience</li>
+							<li class="animate wow flipInX">Quantitative background with hands on experience creating neural networks, advanced statistical models and analysis</li>
+							<li class="animate wow flipInX">Ph.D. in Game Theory, Masters and Bachelors degrees in Statistics</li>
+							<li class="animate wow flipInX">Artificial Intelligence Nanodegree (advanced), Udacity</li>
+						</ul>
+					</div>
+					<div class="col-xs-12 hm-contact">
+						<div class="col-sm-6 col-xs-12">
+							<h5 class="animate wow fadeInUp" style="animation-delay:1.4s;" >Visit my profile on:</h5>
+							<p class="links-profile paddingZ animate wow fadeInUp" style="animation-delay:1.6s;">
+								<a href="https://github.com/rohit-patel" target="_blank">Github</a>
+								<a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2948023" target="_blank">SSRN</a>
+								<a href="https://www.theinternetofthings.eu/rohit-patel" target="_blank"> IoT Council member</a>
+							</p>
+						</div>
+						<div class="col-sm-6 col-xs-12">
+							<p class="animate wow fadeInUp" style="animation-delay:1.2s;">For questions regarding <strong>AI</strong> in business Email me at <a href="mailto:"><strong>contact@rohit-patel.com</strong></a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+     </div>
+</section>
+
+
+{% endblock %}

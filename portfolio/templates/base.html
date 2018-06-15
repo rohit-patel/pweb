@@ -1,0 +1,85 @@
+{% load i18n staticfiles compress cms_tags sekizai_tags menu_tags i18n %}
+
+<!DOCTYPE html>
+<html lang="{{ request.LANGUAGE_CODE }}">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{% block page_title %} {% if page_title %}{{ page_title }}{% endif %}
+        {% trans 'Rohit Patel' %} {% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}{% endblock %}">
+    <meta name="author" content="{% block meta_author %}{% endblock %}">
+    <meta name="viewport" content="width=1300" initial-scale="0">
+
+    <link rel="manifest" href="{% static 'site.webmanifest' %}">
+    <link rel="apple-touch-icon" href="{% static 'imag/icon.png' %}">
+    <!-- Place favicon.ico in the root directory -->
+    <!-- Mobile viewport optimized: h5bp.com/viewport -->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /> -->
+    {% block meta %}{% endblock %}
+    <!-- CSS -->
+    {# use the CDN to get bootstrap css. can not be inside compress css block #}
+    {% block cdn_css %}
+        <link href="https://fonts.googleapis.com/css?family=Muli|Raleway:300,300i,400,400i,500,600,700"
+              rel="stylesheet">
+    {% endblock %}
+
+    {% compress css %}
+        <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/cast.css' %}">
+        {% block css %}
+        {% endblock %}
+    {% endcompress %}
+    {% render_block "css" %}
+    {% compress js %}{% endcompress %}
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+          <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+          <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
+        <![endif]-->
+</head>
+<body data-target=".navbar-collapse" data-offset="500" class="{% block body_class %}{% endblock %}"
+        {% block body_attributes %}{% endblock %} >
+{#        {% cms_toolbar %}#}
+{#        {% show_menu 0 100 100 100 "menu.html" %}#}
+{% include 'menu.html' %}
+<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+     chromium.org/developers/how-tos/chrome-frame-getting-started -->
+<!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+          <![endif]-->
+
+{% block content %}{% endblock %}
+
+<!-- JavaScript -->
+<!-- JavaScript at the bottom for fast page loading -->
+<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+{% block cdn_js %}
+{% endblock cdn_js %}
+<!-- scripts concatenated and minified via django-compressor -->
+{% compress js %}
+    <script src="{% static 'js/vendor/modernizr-3.6.0.min.js' %}"></script>
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/smoothscroll.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+    {% block js %}
+    {% endblock js %}
+{% endcompress %}
+{% render_block "js" %}
+</body>
+</html>
+
