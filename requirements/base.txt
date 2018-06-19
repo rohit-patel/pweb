@@ -1,5 +1,5 @@
 # Django 
-Django==1.11.12
+Django==2.0
 
 # Django CMS + dependencies
 appdirs==1.4.0
@@ -17,7 +17,7 @@ olefile==0.44
 packaging==16.8
 Pillow==4.0.0
 pyparsing==2.1.10
-rcssmin==1.0.6
+rcssmin==1.0.6pip
 rjsmin==1.0.12
 six==1.10.0
 
