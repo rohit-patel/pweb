@@ -76,9 +76,24 @@
     <script src="{% static 'js/smoothscroll.js' %}"></script>
     <script src="{% static 'js/wow.min.js' %}"></script>
     <script src="{% static 'js/custom.js' %}"></script>
+    <script>
+        $(function () {
+            $('#home').addClass('active');
+        });
+        $(document).click(function (e) {
+            if (!$(e.target).is('.panel-body')) {
+                $('.collapse').collapse('hide');
+            }
+        });
+    </script>
     {% block js %}
     {% endblock js %}
 {% endcompress %}
+    <script>
+        window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+        ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 {% render_block "js" %}
 </body>
 </html>
