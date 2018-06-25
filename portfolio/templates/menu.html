@@ -10,11 +10,11 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li id="home"><a class="smoothScroll" href="{% url 'main:homepage' %}">Home</a></li>
-                <li id="ai"><a class="smoothScroll" href="{% url 'main:meet_ai' %}">Meet The AI</a></li>
-                <li id="resume"><a class="smoothScroll" href="{% url 'main:resume' %}">Resume</a></li>
-                <li id="research"><a class="smoothScroll" href="{% url 'main:research' %}">Research</a></li>
-                <li class="dropdown" id="theme"><a href="{% url 'main:latex_beamer_theme' %}">Latex Beamer Themes</a>
+                <li class="{% if request.resolver_match.url_name == "homepage" %}active{% endif %}" id="home"><a class="smoothScroll" href="{% url 'main:homepage' %}">Home</a></li>
+                <li id="ai" class="{% if request.resolver_match.url_name == "meet_ai" %}active{% endif %}"><a class="smoothScroll" href="{% url 'main:meet_ai' %}">Meet The AI</a></li>
+                <li id="resume" class="{% if request.resolver_match.url_name == "resume" %}active{% endif %}"><a class="smoothScroll" href="{% url 'main:resume' %}">Resume</a></li>
+                <li id="research" class="{% if request.resolver_match.url_name == "research" %}active{% endif %}"><a class="smoothScroll" href="{% url 'main:research' %}">Research</a></li>
+                <li id="theme" class="dropdown {% if request.resolver_match.url_name == "latex_beamer_theme" %}active{% endif %}"><a href="{% url 'main:latex_beamer_theme' %}">Latex Beamer Themes</a>
                     <ul class="dropdown-menu">
                         <li><a href="{% url 'main:latex_beamer_theme' %}">LaTeX Beamer Themes</a></li>
                         <li><a href="{% url 'main:latex_beamer_kellogg' %}">LaTex Beamer Presentation Theme for Kellogg</a></li>

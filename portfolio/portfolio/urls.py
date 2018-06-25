@@ -5,8 +5,6 @@ from django.contrib.sitemaps.views import sitemap
 from django.conf import settings
 from django.views.generic.base import TemplateView
 
-from cms.sitemaps import CMSSitemap
-
 
 urlpatterns = [
     url(r'^i18n/', include('django.conf.urls.i18n')),
@@ -14,8 +12,8 @@ urlpatterns = [
 
 
 urlpatterns += [
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^', include('main.urls', namespace='main')),
+    url(r'^admin/', admin.site.urls),
+    url(r'^', include(('main.urls', 'main'), namespace='main')),
 ]
 
 if settings.DEBUG:

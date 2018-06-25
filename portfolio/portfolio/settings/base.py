@@ -146,14 +146,12 @@ TEMPLATES = [
                 'django.template.context_processors.tz',
                 'sekizai.context_processors.sekizai',
                 'django.template.context_processors.static',
-                'cms.context_processors.cms_settings'
             ]
         },
     },
 ]
 
 MIDDLEWARE = (
-    'cms.middleware.utils.ApphookReloadMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -161,10 +159,6 @@ MIDDLEWARE = (
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'cms.middleware.user.CurrentUserMiddleware',
-    'cms.middleware.page.CurrentPageMiddleware',
-    'cms.middleware.toolbar.ToolbarMiddleware',
-    'cms.middleware.language.LanguageCookieMiddleware'
 )
 
 ROOT_URLCONF = 'portfolio.urls'
@@ -173,9 +167,6 @@ ROOT_URLCONF = 'portfolio.urls'
 WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 INSTALLED_APPS = (
-    # Django CMS admin style
-    'djangocms_admin_style',
-
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -185,35 +176,14 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.messages',
 
-    # Django CMS
-    'cms',
-    'menus',
     'sekizai',
     'treebeard',
-    
-
-    
-    # Django filer
-    'filer',
-    'easy_thumbnails',
-    'cmsplugin_filer_image',
-    'cmsplugin_filer_file',
-    'cmsplugin_filer_folder',
-    'cmsplugin_filer_teaser',
-    'cmsplugin_filer_utils',
-    'cmsplugin_filer_video',
-    
-
-    
     'django_select2',
-    'djangocms_style',
-    'djangocms_inherit',
-    'djangocms_text_ckeditor',
-    
-
     'reversion',
     'compressor',
     'core',
+
+    'main',
 
 )
 
@@ -343,11 +313,6 @@ LOCALE_PATHS = (normpath(join(PROJECT_ROOT, 'locale')),)
 
 # Dummy gettext function
 gettext = lambda s: s
-
-# Django CMS configurations
-CMS_TEMPLATES = (
-    ('single_page.html', gettext('Single page')),
-)
 
 LANGUAGES = [
     ('en', gettext('en')),

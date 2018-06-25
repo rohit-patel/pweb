@@ -13,14 +13,9 @@
 					</div>
 					<div class="col-sm-8 col-xs-12 hm-right-div">
 						<ul class="hm-list">
-							<li class="animate wow flipInX">Strategy and analytics professional with 9+ years of experience</li>
-							<li class="animate wow flipInX">Executed numerous successful projects working with C-suite executives leading to tangible business outcomes</li>
-							<li class="animate wow flipInX">Experienced leader having trained and managed large teams</li>
-							<li class="animate wow flipInX">Expertise using AI, machine learning, game theory and advanced analytics to drive strategy and deliver real business impact - from identifying the opportunity, to execution and impact realization</li>
-							<li class="animate wow flipInX">Enjoy bringing complex analytical ideas to business audience</li>
-							<li class="animate wow flipInX">Quantitative background with hands on experience creating neural networks, advanced statistical models and analysis</li>
-							<li class="animate wow flipInX">Ph.D. in Game Theory, Masters and Bachelors degrees in Statistics</li>
-							<li class="animate wow flipInX">Artificial Intelligence Nanodegree (advanced), Udacity</li>
+                            {% for skill in skills %}
+							    <li class="animate wow flipInX">{{ skill.title }}</li>
+                            {% endfor %}
 						</ul>
 					</div>
 					<div class="col-xs-12 hm-contact">
