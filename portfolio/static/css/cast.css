@@ -357,7 +357,7 @@ a{
 	position: absolute;
     top: 0;
     right: 0;
-	padding: 7px 8px;border-radius:2px;
+	padding: 7px 8px;border-radius:2px;right: 15px;
 }
 	.header-links{
 	    position: absolute;
@@ -388,7 +388,7 @@ a{
 	margin-top:20px !important;
 }
 .contact-form {
-	margin-top:10px;margin-bottom: 10px;
+	margin-top:10px;margin-bottom: 10px;padding: 0;
 }
 .contact-form input, textarea {
     margin-bottom: 13px;height: 35px;
@@ -423,6 +423,7 @@ a{
     font-size: 13px;
     padding: 0px 8px;
 }
+
 
 }
 @media only screen and (min-width: 1024px) and (max-width: 1300px){
@@ -498,7 +499,7 @@ height: 14px;
     padding-bottom: 30px;
     padding-left: 25px;
     left: 0;
-    background: rgba(255,255,255,0.4); 
+    background: rgba(255,255,255,0.4);
     padding: 25px;
     bottom: 0;
 }
@@ -637,4 +638,283 @@ height: 14px;
 
 .contact-form h3{margin-bottom:20px;border-bottom:1px solid #eee;padding-bottom:10px;}
 
+#image-preview {
+    width: 350px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+    color: #ecf0f1;
+    display: inline-block;
+    box-shadow: 0px 0px 10px 0px #bbb;
+	margin-bottom: 20px;
+}
+#image-preview input {
+    line-height: 200px;
+    font-size: 200px;
+    position: relative;
+    opacity: 0;
+    z-index: 10;
+    height: 100%;
+	width:100%;
+    top: 0;
+    display: inline-block;
+}
+#image-preview label {
+  position: absolute;
+  z-index: 5;
+  opacity: 0.8;
+  cursor: pointer;
+  background-color: #bdc3c7;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 50px;
+  text-transform: uppercase;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+}
+.detected-txt{
+	height:350px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+.detected-txt h4{
+	font-size:34px;
+	text-shadow:0px 0px 3px #ccc;
+	text-align:center;
+}
+.detected-txt p{
+	font-size:12px;
+	color:#aaa;
+	text-align:center;
+}
 
+@media only screen and (min-width:320px) and (max-width:767px){
+	.hm-left-div{width:100%;margin-bottom:20px;}
+	.hm-list {padding: 0;padding-left: 15px;}
+	.hm-list li {
+    margin-bottom: 8px;
+    font-size: 12px;
+    letter-spacing: 0.8px;
+    line-height: 24px;
+	}
+	.hm-contact {
+    padding: 0px;
+    margin-top: 15px;
+}
+.links-profile a {
+    position: relative;
+    font-size: 12px;
+    padding-right: 8px;
+    margin-right: 8px;
+}
+#home {
+    height: auto;
+}
+.navbar-collapse{margin:0px;}
+.navbar-nav {
+    margin: 0;text-align: right;
+}
+.custom-navbar{padding:0px;}
+.custom-navbar .navbar-brand{margin:0px;}
+.custom-navbar .nav li a {
+    padding: 3px;
+margin: 3px;
+    font-size: 11px;
+}
+.dropdown .dropdown-menu{display:none !important}
+.dropdown:hover .dropdown-menu{display:block !important;box-shadow:none;margin-bottom:10px;}
+.dropdown .dropdown-menu li a {
+    font-size: 11px;width: 100%;
+}
+.dropdown .dropdown-menu{
+      margin-left: -7px;
+	position: relative;
+	width: 100%;
+	text-align: right;
+	text-shadow: none;
+	padding-right: 15px;
+}
+.hm-fluid-pad {
+    padding: 6em 40px 35px;
+}
+.welcome-fluid p {
+    line-height: 20px;
+    font-size: 11px;
+}
+.links-profile {
+    margin-bottom: 10px !important;
+}
+.banner-content h3 {
+	font-size: 18px;
+	right: 0px;
+	bottom: 0;
+	margin-top: 0;
+}
+.theme-cat {
+    min-height: 160px;
+	margin-top: 25px;
+	margin-bottom: 0;
+}
+.welcome-fluid {
+    padding: 0px 0px;
+}
+.theme-div {
+    background: transparent;
+    padding: 0px;
+}
+.theme-div h4 {
+    font-weight: 400;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    line-height: 25px;
+    font-size: 14px
+}
+.research-div {
+    padding: 15px;
+}
+.research-div a {
+    font-size: 14px;margin-bottom:0px;
+}
+.research-div em {
+    font-size: 12px;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+code{font-size:11px;}
+
+.theme-div ul li br, .theme-div ol li br{
+	display:none;
+}
+.theme-div ul li br:nth-child(2), .theme-div ol li br:nth-child(2),.theme-div ul li br:nth-child(1), .theme-div ol li br:nth-child(1){
+	display:block;
+}
+.theme-div ul li, .theme-div ol li {
+    margin-bottom: 6px;
+    font-size: 12px;
+	line-height:23px;
+}
+.welcome-fluid h5{font-size:13px;}
+
+	.custom-navbar {
+    background-color: #ffffff;
+    box-shadow: 0 20px 43px rgba(0,0,0,.2);
+	}
+	.pg-banner{height:130px;}
+	.hm-left-div {
+		padding: 20px;padding-top: 74px;
+	}
+	.hm-contact {
+		margin-bottom: 15px;
+	}
+	.welcome-fluid .hm-contact p{
+		font-size: 10px;
+		letter-spacing: 0px;
+	}
+	.research-main{margin-top:20px;}
+	.contact-form h3{margin-top: 0;}
+	#image-preview {
+    width: 100%;
+    height: 250px;
+	}
+
+.detected-txt {
+    height: auto;
+}
+.detected-txt h4 {
+    font-size: 15px;
+}
+}
+
+@media only screen and (min-width:320px) and (max-width:767px) and (orientation:landscape){
+	.hm-left-div {
+		padding-top: 74px;
+		margin-bottom: 0;
+	}
+	.hm-left-div img {
+		max-height: 260px;
+	}
+	.hm-left-div{box-shadow:none}
+	.hm-list {
+		padding: 20px;
+		padding-bottom: 0;
+
+		margin-bottom: 0;
+	}
+	.hm-contact {
+		margin-bottom: 15px;
+	}
+	.dropdown .dropdown-menu {
+    margin-left: 0;
+    width: 100%;
+    text-align: right;
+    box-shadow: none;
+    margin-bottom: 10px;
+	}
+	.welcome-fluid {
+		padding: 15px;
+	}
+	.dropdown .dropdown-menu li a{
+    padding: 5px;
+	}
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px){
+.welcome-fluid {
+    padding: 15px 20px;
+}
+.hm-fluid-pad {
+    padding: 8em 15px 20px !important;
+}
+.theme-cat {
+    min-height: 220px;
+    margin-top: 30px;
+}
+.research-div {
+    padding: 15px;
+}
+.research-div a {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.custom-navbar{padding-bottom:5px;}
+
+.hm-contact {
+    padding: 0px;
+    margin-top: 15px;
+}
+.theme-div h4 {
+    line-height: 27px;
+    font-size: 16px;
+}
+.dropdown .dropdown-menu li a {
+    font-size: 11px;width: 100%;margin:0px;padding:10px;
+}
+.custom-navbar .nav li a{margin-left:0px;}
+.banner-content h3 {
+    font-size: 21px;
+    right: 15px;
+    bottom: 0;
+}
+.theme-div {
+    background: transparent;
+    padding: 0px;
+}
+.pg-banner {
+    height: 160px;
+}
+.detected-txt h4 {
+    font-size: 20px;
+}
+#image-preview {
+    width: 270px;
+    height: 270px;
+}
+}

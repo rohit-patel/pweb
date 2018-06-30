@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from main.views import (HomepageView, MeetAIView, ResumeView, ResearchView,
+from main.views import (HomepageView, MeetAIView, ResumeView, ResearchView, DetectionView,
                         LatexBeamerThemeView, LatexBeamerKelloggView, LatexBeamerNorthWesternView)
 
 urlpatterns = [
@@ -11,4 +11,5 @@ urlpatterns = [
     url(r'^latex-beamer-theme/$', LatexBeamerThemeView.as_view(), name='latex_beamer_theme'),
     url(r'^latex-beamer-presentation-kellogg/$', LatexBeamerKelloggView.as_view(), name='latex_beamer_kellogg'),
     url(r'^latex-beamer-presentation-northwestern/$', LatexBeamerNorthWesternView.as_view(), name='latex_beamer_northwestern'),
+    url(r'^detection/$', DetectionView.as_view(), name='detection'),
 ]

@@ -1,4 +1,5 @@
 # Create your views here.
+from django.http import JsonResponse
 from django.views.generic import TemplateView, CreateView
 from django.contrib import messages
 from .models import Skill, AIProject, Research
@@ -55,3 +56,12 @@ class LatexBeamerKelloggView(TemplateView):
 
 class LatexBeamerNorthWesternView(TemplateView):
 	template_name = 'latex_beamer_northwestern.html'
+
+
+class DetectionView(TemplateView):
+	template_name = 'detection.html'
+
+	def post(self, request, *args, **kwargs):
+		def post(self, request, *args, **kwargs):
+			image = request.FILES.get('image')
+			return JsonResponse({'image':'',},status=200)

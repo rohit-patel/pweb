@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+	<div class="container-fluid pg-banner">	
+		<div class="container">	
+			<div class="col-xs-12 banner-content">
+				<h3 class="animate wow fadeInUp">Detection</h3>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid welcome-fluid ">
+		<div class="container">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="col-sm-5 col-xs-12 contact-form">
+					<form method="post">
+						<div class="col-xs-12">
+							<div id="image-preview">
+								<label for="image-upload" id="image-label">Choose File</label>
+								<input type="file" name="image" id="image-upload" />
+							</div>
+						</div>
+						<div class="col-xs-12">
+							<button type="submit" class="btn">Submit</button>
+						</div>
+					</form>
+				</div>
+				<div class="col-sm-7 col-xs-12 detected-txt ">
+					<div class="col-xs-12">
+						<h4>Here are a few human pictures</h4>
+						<p>Prediction after submission of image.</p>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+{% endblock %}
+{% block js %}
+    <script type="text/javascript" src="{% static 'js/jquery.uploadPreview.js' %}"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+		  $.uploadPreview({
+			input_field: "#image-upload",   // Default: .image-upload
+			preview_box: "#image-preview",  // Default: .image-preview
+			label_field: "#image-label",    // Default: .image-label
+			label_default: "Choose File",   // Default: Choose File
+			label_selected: "Change File",  // Default: Change File
+			no_label: false                 // Default: false
+		  });
+		});
+	</script>
+{% endblock %}
